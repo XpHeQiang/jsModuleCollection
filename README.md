@@ -124,4 +124,65 @@
 		       dataMsg:data.list
 		    }
 		});
-   	*****﻿
+   	*****
+   	
+### 7.meta 模式 ###
+	<!--优先使用最新版本 IE 和 Chrome-->
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+	<!--360 使用Google Chrome Frame-->
+	<meta name="renderer" content="webkit">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no" />
+	<!-- 禁止百度转码 -->
+	<meta http-equiv="Cache-Control" content="no-siteapp" />
+	<!--状态栏的背景颜色-->
+	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+	<!-- uc强制竖屏 -->
+	<meta name="screen-orientation" content="portrait">
+	<!-- QQ强制竖屏 -->
+	<meta name="x5-orientation" content="portrait">
+	<!-- UC应用模式 -->
+	<meta name="browsermode" content="application">
+	<!-- QQ应用模式 -->
+	<meta name="x5-page-mode" content="app">
+	
+### 8.Bootstrap省市区三级联动菜单 ###
+	<div class="d_content_nr">
+		<p>收 货 地 址</p>
+		<form class="form-inline">
+		  <div data-toggle="distpicker">
+			<div class="form-group">
+			  <select class="form-control" id="province1"></select>
+			</div>
+			<div class="form-group">
+			  <select class="form-control" id="city1"></select>
+			</div>
+			<div class="form-group">
+			  <select class="form-control" id="district1"></select>
+			</div>
+		  </div>
+		</form>
+		<input id="dizhixiangqiang" type="text" name="d_username" placeholder="请填写详细地址">
+	</div>
+	
+### 9.媒体查询 @media ###
+	@media screen and (max-width: 320px) {
+		.commodityListBox ul li{
+			width: 75px;
+		}
+	}
+	
+### 10.URL  参数  获取值 ###
+	参数：
+	 1 . name : url上传递的参数名称
+	注：
+	 GetQueryString(参数)  ：  传递参数是需要给 参数 加上引号传递
+	 
+	 // -------------------截取url上面的参数-----------------------
+	function GetQueryString(name)
+	{
+	    var reg = new RegExp("(^|&)"+ name +"=([^&]*)(&|$)");
+	    var r = window.location.search.substr(1).match(reg);
+	    if(r!=null)return  unescape(r[2]); return null;
+	}﻿
+   	
+   	﻿
